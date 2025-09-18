@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: spring-security-backend
+    env: java
+    rootDir: Backend/Spring_Security
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: PORT
+        value: 8080
